@@ -1,6 +1,8 @@
 /* eslint-disable */
 <template>
   <div class="test">
+    <br>
+    <br>
     <h4 style="text-align: right; margin-right: 50px;" >
     Seconds Elapsed since Exam Start: {{ time }}
    </h4>
