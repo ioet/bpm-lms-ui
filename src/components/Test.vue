@@ -1,14 +1,19 @@
+/* eslint-disable */
 <template>
   <div class="test">
     <h4 style="text-align: right; margin-right: 50px;" >
     Seconds Elapsed since Exam Start: {{ time }}
    </h4>
+   <v-container align-center>
+    <v-layout row wrap>
+   <v-flex xs4></v-flex>
+    <v-flex xs4>
     <h1>{{ test[0].name }}</h1>
 
       <div v-for="question, index in test[0].questions" >
           <h2 v-bind:class="index" v-on:click="handleClickEvents(index)">{{question}}</h2>
           <br>
-          <textarea v-bind:class="index" placeholder="Answer here..." style="width: 500px;" @change="handleTextEvents(index)" v-on:click="handleClickEvents(index)"></textarea>
+          <v-text-field textarea align-center v-bind:class="index" placeholder="Answer here..." style="width: 500px; margin-left:40px;" @change="handleTextEvents(index)" v-on:click="handleClickEvents(index)"></v-text-field>
       </div>
       <br>
       <br>
@@ -23,7 +28,10 @@
       <br>
       <br>
       <br>
-      <button v-on:click="getAnswers()">Submit Answers</button>
+      <v-btn v-on:click="getAnswers()">Submit Answers</v-btn>
+    </v-flex>
+  </v-layout>
+</v-container>
   </div>
 </template>
 
