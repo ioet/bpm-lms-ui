@@ -1,7 +1,7 @@
-import Api from '@/services/Api'
+import ApiAWS from '@/services/ApiAWS'
 
 export default {
   fetchTest () {
-    return Api().get('test')
+    return ApiAWS().get('test')
   }
 }
