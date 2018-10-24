@@ -60,7 +60,7 @@ export default {
     },
     getTime: function() {
       var timeTest = {
-        testId: this.test[0]._id, //Id of the test
+        testId: 0, //Id of the test
         time: this.time //Time it took the student to finish the test
       };
       producerService.sendMessage(timeTest);
@@ -71,7 +71,7 @@ export default {
     },
     handleTextEvents: function(index) {
       var textareaEvent = {
-        testId: this.test[0]._id, //Id of the test
+        testId: 0, //Id of the test
         event: 1, //Text changed event identifier/ event# 1
         question: index
       };
@@ -79,7 +79,7 @@ export default {
     },
     handleClickEvents: function(index) {
       var clickEvent = {
-        testId: this.test[0]._id, //Id of the test
+        testId: 0, //Id of the test
         event: 2, //Question clicked event identifier/ event# 2
         question: index
       };
@@ -87,7 +87,7 @@ export default {
     },
     handleVideoEvents: function() {
       var videoEvent = {
-        testId: this.test[0]._id, //Id of the test
+        testId: 0, //Id of the test
         event: 3, //Question clicked event identifier/ event# 2
         question: "video"
       };
