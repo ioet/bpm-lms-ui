@@ -39,7 +39,7 @@
 
 <script>
 import TestService from "@/services/TestService";
-//import producerService from '@/services/producerService'
+import producerService from '@/services/producerService'
 export default {
   name: "test",
   data() {
@@ -63,7 +63,7 @@ export default {
         testId: this.test[0]._id, //Id of the test
         time: this.time //Time it took the student to finish the test
       };
-      //producerService.sendMessage(timeTest);
+      producerService.sendMessage(timeTest);
     },
     getAnswers: function() {
       //get answers from questions and finish test logic
@@ -75,7 +75,7 @@ export default {
         event: 1, //Text changed event identifier/ event# 1
         question: index
       };
-      //producerService.sendMessage(textareaEvent);
+      producerService.sendMessage(textareaEvent);
     },
     handleClickEvents: function(index) {
       var clickEvent = {
@@ -83,7 +83,7 @@ export default {
         event: 2, //Question clicked event identifier/ event# 2
         question: index
       };
-      //producerService.sendMessage(clickEvent);
+      producerService.sendMessage(clickEvent);
     },
     handleVideoEvents: function() {
       var videoEvent = {
@@ -91,7 +91,7 @@ export default {
         event: 3, //Question clicked event identifier/ event# 2
         question: "video"
       };
-      // producerService.sendMessage(videoEvent);
+      producerService.sendMessage(videoEvent);
     },
     toggleTimer() {
       if (this.isRunning) {

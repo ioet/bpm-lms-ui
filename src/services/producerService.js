@@ -1,7 +1,7 @@
-import producerConnection from '@/services/producerConnection'
+import ApiAWS from '@/services/ApiAWS'
 
 export default {
   sendMessage (message) {
-    return producerConnection().post('sendMessage', message)
+    return ApiAWS().post('sendMessage', message)
   }
 }
