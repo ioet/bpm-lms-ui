@@ -29,30 +29,27 @@
 </template>
 
 <script>
-  export default {
-    data: () => ({
-      valid: false,
-      name: '',
-      show1: false,
-      nameRules: [
-        v => !!v || 'Name is required',
-        v => v.length <= 10 || 'Name must be less than 10 characters'
-      ],
-      email: '',
-      passwordRules: [
-        v => !!v || 'Password is required',
-        v => v.length >= 8 || 'Min 8 characters'
-      ]
-    }),
-    methods:{
-
-      loginLogic: function () {
-        if (this.name== "jguilindro"){
-          this.$router.push('/test')
-        }
-
-      } 
-
+export default {
+  data: () => ({
+    valid: false,
+    name: "",
+    show1: false,
+    nameRules: [
+      v => !!v || "Name is required",
+      v => v.length <= 10 || "Name must be less than 10 characters"
+    ],
+    email: "",
+    passwordRules: [
+      v => !!v || "Password is required",
+      v => v.length >= 8 || "Min 8 characters"
+    ]
+  }),
+  methods: {
+    loginLogic: function() {
+      if (this.name == "jguilindro") {
+        this.$router.push("/test");
+      }
     }
   }
+};
 </script>

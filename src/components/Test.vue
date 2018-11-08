@@ -39,7 +39,7 @@
 
 <script>
 import TestService from "@/services/TestService";
-import producerService from '@/services/producerService'
+import producerService from "@/services/producerService";
 export default {
   name: "test",
   data() {
