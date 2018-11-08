@@ -25,18 +25,13 @@
       <v-icon>more_vert</v-icon>
     </v-btn>
   </v-toolbar>
-
- 
     <v-navigation-drawer
       v-model="drawer"
       absolute
       temporary
     >
       <v-list class="pa-1">
-        <!--<v-list-tile avatar>
-          <v-list-tile-avatar>
-            <img src="https://randomuser.me/api/portraits/men/85.jpg">
-          </v-list-tile-avatar>-->
+        
 
           <v-list-tile-content>
             <v-list-tile-title>BPM-LMS</v-list-tile-title>
@@ -67,22 +62,22 @@
 
 <script>
 export default {
-  name: "App",
-  data() {
+  name: 'App',
+  data () {
     return {
       drawer: null,
       items: [
-        { title: "Home", icon: "dashboard" },
-        { title: "About", icon: "question_answer" }
+        { title: 'Home', icon: 'dashboard' },
+        { title: 'About', icon: 'question_answer' }
       ]
-    };
+    }
   },
   methods: {
-    home: function() {
-      this.$router.push("/");
+    home: function () {
+      this.$router.push('/')
     }
   }
-};
+}
 </script>
 
 <style>

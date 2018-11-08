@@ -12,10 +12,10 @@
     <v-flex xs4>
     <h1>{{ test.name }}</h1>
 
-      <div v-for="question, index in test.questions.values" >
+      <div v-for="(question, index) in questions" :key="index">
           <h2 v-bind:class="index" v-on:click="handleClickEvents(index)">{{question}}</h2>
           <br>
-          <v-text-field textarea align-center v-bind:class="index" placeholder="Answer here..." style="width: 500px; margin-left:40px;" @change="handleTextEvents(index)" v-on:click="handleClickEvents(index)"></v-text-field>
+          <v-textarea outline align-center v-bind:class="index" placeholder="Answer here..." style="width: 500px; margin-left:40px;" @change="handleTextEvents(index)" v-on:click="handleClickEvents(index)"></v-textarea>
       </div>
       <br>
       <br>
@@ -45,7 +45,8 @@ export default {
   data() {
     return {
       time: 0,
-      test: []
+      test: [],
+      questions: []
     };
   },
   mounted() {
@@ -57,6 +58,7 @@ export default {
       const response = await TestService.fetchTest();
       //console.log(response.data);
       this.test = response.data.Item;
+      this.questions= response.data.Item.questions.values;
     },
     getTime: function() {
       var timeTest = {
